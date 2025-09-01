@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, X } from "lucide-react";
+import { Globe, Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +12,7 @@ import {
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +57,13 @@ const Navbar = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -100,6 +109,19 @@ const Navbar = () => {
                 Affiliate
               </a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+                <Button variant="ghost" onClick={toggleTheme} className="w-full justify-start">
+                  {theme === "dark" ? (
+                    <>
+                      <Sun className="h-5 w-5 mr-2" />
+                      Light Mode
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="h-5 w-5 mr-2" />
+                      Dark Mode
+                    </>
+                  )}
+                </Button>
                 <Button variant="outline" className="w-full">Sign In</Button>
                 <Button variant="gradient" className="w-full">Get Started</Button>
               </div>

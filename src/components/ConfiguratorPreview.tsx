@@ -16,7 +16,7 @@ const ConfiguratorPreview = () => {
   return (
     <section id="pricing" className="py-20 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent dark:from-primary/3" />
       
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">

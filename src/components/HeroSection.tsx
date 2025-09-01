@@ -5,11 +5,11 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-30" />
+      <div className="absolute inset-0 bg-gradient-hero opacity-30 dark:opacity-20" />
       
       {/* Floating shapes */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-magenta/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-deep-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-magenta/10 dark:bg-magenta/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-deep-purple/10 dark:bg-deep-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

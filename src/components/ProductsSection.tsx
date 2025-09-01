@@ -36,7 +36,7 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <Card 
               key={index}
-              className="relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 dark:bg-card"
             >
               {/* Gradient border effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-10`} />
